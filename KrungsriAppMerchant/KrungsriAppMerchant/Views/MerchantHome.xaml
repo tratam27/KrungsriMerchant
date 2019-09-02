@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"             
+             xmlns:bd="clr-namespace:KrungsriAppMerchant.ViewModel"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="KrungsriAppMerchant.Views.MerchantHome">
+    <ContentPage.BindingContext>
+        <bd:MerchantViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="330"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="Purple">
+                <Label Text="ยินดีต้อนรับ ดำรงเดช" FontSize="20" TextColor="White"/>                
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="#FFFFFF">
+                <Frame BackgroundColor="White" Grid.Column="0" Grid.Row="0" CornerRadius="10" HeightRequest="135"
+                       VerticalOptions="Center" WidthRequest="135" HorizontalOptions="Center" HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PushToCreateQRCode}"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="qricon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="สร้าง QR Code" TextColor="#9FA2A4" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="White" Grid.Column="1" Grid.Row="0" CornerRadius="10" HeightRequest="135"
+                       VerticalOptions="Center" WidthRequest="135" HorizontalOptions="Center" HasShadow="True">
+                    <StackLayout>
+                        <Image Source="phoneicon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Coming Soon" TextColor="#9FA2A4" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="White" Grid.Column="0" Grid.Row="1" CornerRadius="10" HeightRequest="135"
+                       VerticalOptions="Center" WidthRequest="135" HorizontalOptions="Center" HasShadow="True">
+                    <StackLayout>
+                        <Image Source="phoneicon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Coming Soon" TextColor="#9FA2A4" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="White" Grid.Column="1" Grid.Row="1" CornerRadius="10" HeightRequest="135"
+                       VerticalOptions="Center" WidthRequest="135" HorizontalOptions="Center" HasShadow="True">
+                    <StackLayout>
+                        <Image Source="phoneicon" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="Coming Soon" TextColor="#9FA2A4" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

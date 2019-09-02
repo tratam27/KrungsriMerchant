@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+            BarBackgroundColor="White"
+            NavigationPage.HasNavigationBar="False"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"            
+            android:TabbedPage.BarItemColor="LightGray"
+            android:TabbedPage.BarSelectedItemColor="#EAA200"
+            xmlns:local="clr-namespace:KrungsriAppMerchant.Views;assembly=KrungsriAppMerchant"
+             x:Class="KrungsriAppMerchant.Views.MotherTabbedPage">
+    <TabbedPage.Children>
+        <local:MerchantHome IconImageSource="HomeTabbed"/>
+        <local:MerchantTransaction IconImageSource="HistoryTabbed"/>
+    </TabbedPage.Children>
+</TabbedPage>
